@@ -1,0 +1,989 @@
+
+
+.shad-dark{
+	box-shadow: 0px 1px 3px 1px darkslateblue;
+	z-index: 1;
+	transition-delay: 2s;
+
+}
+
+.shad-light{
+	box-shadow: -5px -5px 6px 3px dimgray;
+	z-index: 1;
+	transition-delay: 2s;
+}
+
+.outline{
+	box-shadow: 0px 0px 0px 1px mediumslateblue;
+	z-index: 4
+}
+
+body{
+	font-family: Calibri, Arial, Verdana, Sans-Serif;
+	font-size: 18px;
+	padding: 0;
+	margin: 0;
+	background-color: linen;
+	color: #222222;
+}
+
+
+p{
+	font-size: 18px;
+	font-family: Calibri, Arial, Verdana, Sans-Serif;
+
+}
+
+h1, h2 , h3 , h4 , h5{
+	font-family: Cambria, Times New Roman, Serif;
+	margin: 0;
+	padding: 0;
+}
+
+
+section{
+
+	margin: 50px 0 0 0 ;
+	background-color: linen;
+}
+.contnr{
+	padding: 20px 30px 40px 30px;
+}
+
+
+.contnr-btn{
+	box-shadow: 0px 5px 10px -10px black;
+	transform: skewX(25deg);
+	padding: 0 40px 0 40px;
+	margin: 10px 10px 20px 10px;
+	float: right;
+	transition: .4s
+}
+
+
+.contnr-btn:hover{
+	box-shadow: 0px 5px 10px -10px black;
+	transform: skewX(25deg);
+	padding: 0 40px 0 90px;
+	margin: 10px 10px 20px 10px;
+	float: right;
+	transition: .4s
+
+}
+
+.nw-contnr .ne-contnr-btn h1 a{
+	text-decoration: none;
+	color: mediumslateblue;
+	font-family: Cambria, Times New Roman, Serif;
+}
+.event-contnr .ev-contnr-btn h1 a{
+	text-decoration: none;
+	color: aliceblue;
+	font-family: Cambria, Times New Roman, Serif;
+}
+.category{
+	transform: skewX(-25deg);
+	text-align: left;	
+}
+.read-more{
+color: darkslateblue;
+font-size: 18px;
+}
+
+
+section .page-img{
+	height: 600px;
+	width: 100%;
+	object-fit: cover;
+	padding: 0;
+	margin: 0;
+}
+section .img-src-desc{
+	text-align: center;
+	margin: 0;
+	padding: 0 2%;
+	box-shadow: 0px 5px 10px -10px black;
+}
+
+
+article .btn-align{
+	margin:0 0 15px 0;
+	padding: 0;
+	height: 40px;
+	width: 100%;
+}
+
+article .btn-align button{
+	padding: 10px 0 10px 0;
+	background-color: mediumslateblue;
+	border-style: none;
+	color: white;
+	width: 100%;
+	margin: 10px 0 10px 0;
+	align-self: center;
+	box-shadow: 0px 5px 10px -10px black;
+
+}
+
+article .btn-align button h2{
+}
+
+
+
+/*  >>>>>>>>>>>>>>>>>   END OF GLOBAL STYLE <<<<<<<<<<<<<<<<<<<<<<*/
+
+
+
+
+
+
+
+
+
+
+
+.logo{
+	position: fixed;
+	margin: 5px 20px 0 20px;
+	border-bottom-right-radius:  50%;
+	border-bottom-left-radius: 50%;
+	height: 90px;
+	width: 90px;
+	transition: .2s;
+}
+
+.logo-shrink{
+	position: fixed;
+	margin: 5px 0 0 60px;
+	border-bottom-right-radius:  50%;
+	border-bottom-left-radius: 50%;
+	height: 30px;
+	width: 30px;
+	transition: .3s;
+	transition-delay: .2s;
+}
+.logo-front{
+	z-index: 9;
+}
+.u-name{
+	position: fixed;
+	font-family: Cambria, Times New Roman, Serif;
+	color: green;
+	width: 295px;
+	height: 110px;
+	position: fixed;
+	top: -10px;
+	left: -50px;
+	background-color:aliceblue;
+	padding: 0 20px 0 50px;
+	transform: skewX(-25deg);
+	transition-delay: 1s;
+	transition: .5s;
+}
+.u-name-shrink{
+	position: fixed;
+	left: -100%;
+	top: -10px;
+	width: 300px;
+	background-color:aliceblue;
+	padding: 0 20px 0 50px;
+	color: green;
+	transform: skewX(-25deg);
+	transition: 1s;
+}
+.u-name-front{
+	position: fixed;
+	z-index: 6;
+}
+
+
+ 
+p.u-1{
+	font-family: Cambria, Times New Roman, Serif;
+	text-align: right;
+	font-size: 34px;
+	padding: 20px 10px 0 0;
+	margin: 0 -3px 0 -20px;
+	transform: skewX(25deg);
+	font-weight: bold;
+}
+
+
+
+p.u-2{
+	font-family: Cambria, Times New Roman, Serif;
+	text-align: right;
+	font-size: 34px;
+	padding: 5px 0 5px 0;
+	margin: 0 0 0 -15px;
+	transform: skewX(25deg);
+	font-weight: bold;
+}
+
+
+.span-hide{
+	position: absolute;
+	top: 6px;
+	left: -100%;
+	font-family: Cambria, Times New Roman, Serif;
+	font-size: 24px;
+	color: green;
+	transition: 2s;
+}
+
+.span-show{
+	position: absolute;
+	top: 6px;
+	left: 100px;
+	font-family: Cambria, Times New Roman, Serif;
+	font-size: 24px;
+	color: green;
+	transition: .5s;
+
+}
+
+header{
+	position: fixed;
+	top: 0;
+	background-color: aliceblue;
+	width: 100%;
+	height: 40px;
+	z-index: 7;
+
+}
+
+header nav{
+	float: right;
+	padding-right: 8%;
+}
+header nav ul{
+	cursor: pointer;
+	margin: 0;
+	padding: 0;
+	display: flex;
+}
+header nav ul li{
+	list-style: none;
+	position: relative;
+}
+
+
+/*
+header nav ul li.active.n-list:before{
+	content: '^';
+}
+header nav ul li.n-list:before{
+	content: 'v';
+: sans-serif;position: absolute;
+	line-height: 40px;
+	right: 5px;
+}
+
+*/
+
+header nav ul li a{
+	height: 40px;
+	line-height: 40px;
+	padding: 0 14px;
+	text-decoration: none;
+	display: block;
+
+}
+header nav ul li a:hover,
+header nav ul li a.active{
+	color: #fff;
+	background: mediumslateblue;
+}
+header nav ul li ul{
+	position: absolute;
+	left: 0;
+	background: white;
+	display: none;
+	box-shadow: -2px 3px 10px -5px dimgray;
+
+}
+header nav ul li.active ul{
+	display: block;
+}
+header nav ul li ul li{
+	display: block;
+	width: 200px;
+}
+.menu-btn{
+	color: #fff;
+	float: right;
+	line-height: 50px;
+	font-size: 24px;
+	cursor: pointer;
+	display: none;
+}
+
+/*		********************** END OF NAVIGATION BAR *************************/
+
+.sld-show{
+	padding: 50px 0 10px 0; 
+	width: 100%;
+	background-color: mediumturquoise;
+	transition: .2s;
+
+}
+
+
+.sld-show-changed{
+	padding: 50px 0 0 0; 
+	width: 100%;
+	background-color: black;
+	transition: .2s;
+
+}
+
+.num-sld{
+	box-shadow: 0px 3px 10px -3px dimgray;
+	height: 80%;
+	width: 100%;
+	object-fit: cover;
+
+}
+
+.num-sld-changed{
+	box-shadow: 0px 3px 10px -3px transparent;
+	height: 80%;
+	width: 100%;
+	object-fit: cover;
+
+}
+
+
+
+
+/*		********************** END OF sld SHOW *************************/
+
+.separator-sldr{
+	width: 100%;
+	height: 10px;
+	background-color: aliceblue;
+}
+
+.trapz{
+	position: absolute;
+	right: 0;
+	margin-top:-30px;
+	border-bottom: 40px solid aliceblue;
+	border-left: 20px solid transparent;
+	height: 0;
+	width: 150px;
+}
+
+
+
+/*		********************** END OF SEPARATOR *************************/
+
+.nw-contnr{
+	background-color: mediumslateblue;
+	box-shadow: inset 0px 5px 15px -15px black;
+}
+.nw-sect{
+	clear: both;
+	display: flex;
+	justify-content: space-between;
+	padding: 0;
+	margin: 0;
+}
+.ne-contnr-btn{
+	background-color: aliceblue;
+	border-right: 10px solid gray;
+}
+a.nw-anchor{
+	height: 100%;
+	padding: 0;
+	margin: 0 20px;
+	width: 22%;
+	text-decoration: none;
+	color: black;
+	box-shadow: 0px 5px 10px -10px black;
+}
+.nw-img-sect{
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+.nw-img{
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+	text-align:center;
+	margin: 0 0 -5px 0;
+	padding: 0;
+}
+.nw-ar-sect{
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	overflow-wrap: break-word;
+	background-color: aliceblue;
+}
+.nw-ar-subject{
+	margin: 0;
+	padding: 20px 0 0 20px;
+	overflow-wrap: break-word;
+}
+.nw-ar-content{
+	margin: 0;
+	padding: 10px;
+	overflow-wrap: break-word;
+}
+
+
+
+
+/*		********************** END OF nw contnr *************************/
+
+.event-contnr{
+	background-color: aliceblue;
+}
+.event-sect{
+	clear: both;
+	display: flex;
+	justify-content: space-between;
+	padding: 0;
+	margin: 0;
+}
+.ev-contnr-btn{
+	background-color: mediumslateblue;
+	color: white;
+	border-right: 10px solid darkslateblue;
+	float: right;
+}
+a.event-anchor{
+	height: 100%;
+	padding: 0;
+	margin: 0 10px;
+	text-decoration: none;
+	width: 30%;
+	color: black;
+	box-shadow: 0px 5px 15px -15px black;
+}
+.ev-date{
+	position: absolute;
+	background-color: mediumslateblue;
+	margin: -10px 0 0 15px;
+	padding: 5px 10px;
+	box-shadow: 0px 5px 10px -10px black;
+}
+.ev-date p,
+.ev-date h3{
+	color: white;
+	margin: 3px 3px 2px 3px ;
+	padding:0;
+	text-align: center;
+}
+.event-img-sect{
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+.event-img{
+	width: 100%;
+	height: 150px;
+	object-fit: cover;
+	text-align:center;
+	margin: 0 0 -5px 0;
+	padding: 0;
+}
+.event-ar-sect{
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	overflow-wrap: break-word;
+	background-color: white;
+}
+.event-ar-date{
+	margin: 0;
+	font-size: 14px;
+	padding: 5px 10px;
+	overflow-wrap: break-word;
+	text-transform: uppercase;
+}
+.event-ar-subject{
+	margin: 0;
+	padding: 0 0 0 30px;
+	overflow-wrap: break-word;
+}
+.event-ar-add{
+	margin: 0;
+	padding: 0 10px 5px 30px;
+	overflow-wrap: break-word;
+}
+
+
+
+
+/*		********************** END OF EVENT contnr *************************/
+
+
+
+
+section .news-section{
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+}
+
+
+section  .news-section main{
+	padding:50px 50px 50px 70px;
+	margin: 10px 0 0 0 ;
+	width: 65%; 
+	background-color: white;
+	float: left;
+}
+
+section .news-section main article p:first-child::first-letter{
+	font-size: 200%;
+	font-family: Cambria, Times New Roman, Serif;
+}
+
+section .news-section main .nw-page-date{
+	font-family: Cambria, Times New Roman, Serif;
+}
+
+section .news-section main .nw-head .nw-author{
+	padding: 0;
+	margin: 0;
+}
+
+section .news-section main .nw-head p.nw-art-summary{
+text-align: justify;
+padding: 0;
+margin: 5px;
+
+}
+
+section .news-section main article p{
+text-indent: 50px;
+text-align: justify;
+
+}
+
+
+section .news-section .nw-main-cat{
+	color: darkslategray;
+	text-align: right;
+	font-size: 24px;
+}
+
+article.news-s-bar{
+	width: 35%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+
+}
+
+section .news-section article .news-list{
+	display: block;
+	justify-content: center ;
+	border: 1px solid mediumslateblue;
+	background-color: white;
+	box-shadow: 0px 5px 10px -10px black;
+	margin: 10px 0 0 0 ;
+	padding: 0;
+}
+
+article.news-s-bar .news-list h1{
+	background-color: mediumslateblue;	
+	padding: 20px;
+	color: white;
+}
+
+
+.news-list ul{
+	list-style: none;	
+	margin: 0;
+	padding: 0;
+
+}
+
+.news-list ul li:first-child{
+	margin: 0;
+	padding: 10px 0 10px 0;
+	border-top: none;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+
+}
+
+.news-list ul li{
+	margin: 0;
+	padding: 10px 0 10px 0;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-top: 1px solid mediumslateblue;
+
+}
+
+
+
+.news-list ul li h2{
+	margin: 0;
+	padding: 0;
+}
+
+
+.news-list ul li p{
+	margin: 0;
+	padding: 0;
+
+}
+
+
+
+
+
+
+
+
+
+/*		********************** events.html *************************/
+
+
+article .ev-poster-desc img.ev-poster{
+	width: 100%;
+	height: 400px;
+	object-fit: contain;
+	background-color: mediumslateblue;
+}
+
+
+article .ev-poster-desc{
+	box-shadow: 0px 5px 10px -10px black;
+}
+
+
+article .ev-poster-desc ul{
+	list-style: none;	
+	margin: 0;
+	padding: 0 10px 10px 50px;
+	background-color: white;
+
+}
+
+article .ev-poster-desc ul li,
+article .ev-poster-desc ul li h5,
+article .ev-poster-desc ul li p{
+	margin: 0;
+	padding: 0;
+
+}
+
+article .ev-poster-desc ul li p{
+	display: inline-block;
+
+}
+article .ev-poster-desc ul li{
+	margin: 0 0 15px 0;
+	padding: 0;
+
+}
+article.ev-s-bar .ev-list h1{
+	background-color: mediumslateblue;	
+	padding: 20px;
+	color: white;
+}
+
+
+.ev-list ul{
+	list-style: none;	
+	margin: 0;
+	padding: 0;
+
+}
+
+.ev-list ul li:first-child{
+	margin: 0;
+	padding: 10px 0 10px 0;
+	border-top: none;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+
+}
+
+.ev-list ul li{
+	margin: 0;
+	padding: 10px 0 10px 0;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-top: 1px solid mediumslateblue;
+
+}
+
+
+
+.ev-list ul li h2{
+	margin: 0;
+	padding: 0;
+}
+
+
+.ev-list ul li p{
+	margin: 0;
+	padding: 0;
+
+}
+
+
+
+
+section .ev-section{
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+}
+
+
+section  .ev-section main{
+	padding:50px 50px 50px 70px;
+	margin: 10px 0 0 0 ;
+	width: 65%; 
+	background-color: azure;
+	float: left;
+}
+
+section .ev-section main article p:first-child::first-letter{
+	font-size: 200%;
+	font-family: Cambria, Times New Roman, Serif;
+}
+
+section .ev-section main .ev-page-date{
+	font-family: Cambria, Times New Roman, Serif;
+}
+
+section .ev-section main .ev-head .ev-author{
+	padding: 0;
+	margin: 0;
+}
+
+section .ev-section main .ev-head p.ev-art-summary{
+text-align: justify;
+padding: 0;
+margin: 5px;
+
+}
+
+section .ev-section main article p{
+text-indent: 50px;
+text-align: justify;
+
+}
+
+
+section .ev-section .ev-main-cat{
+	color: darkslategray;
+	text-align: right;
+	font-size: 24px;
+}
+
+article.ev-s-bar{
+	width: 35%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+
+}
+
+section .ev-section article .ev-list{
+	display: block;
+	justify-content: center ;
+	border: 1px solid mediumslateblue;
+	background-color: white;
+	box-shadow: 0px 5px 10px -10px black;
+	margin: 10px 0 0 0 ;
+	padding: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*		********************** WELCOME FOOTER *************************/
+
+
+
+
+footer{
+	clear: both;
+	background-color: darkslategray;
+	height: 100px;	
+	padding: 0;
+	margin: 0;
+
+
+}
+
+
+footer .footer-contnr{
+	box-shadow:  inset 0px 15px 25px -25px black;
+	background-color: darkslategray;
+
+	padding: 2% 2% 0 2%;
+	margin: 0;
+
+}
+
+footer .footer-contnr .foot-bx{
+	display: inline-block;
+	width: 150px;
+	padding: 0;
+	margin: 0;
+
+}
+
+
+footer .footer-contnr .foot-bx h3{
+	font-family: Cambria, Times New Roman, Serif;
+	color: white;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+} 
+
+
+
+footer .footer-contnr .foot-bx h2{
+	font-family: Cambria, Times New Roman, Serif;
+	color: white;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+
+}
+
+.bx1{
+}
+
+footer .footer-contnr .foot-bx ul{
+	border-left: 2px solid white;
+	list-style: none;
+	padding: 20px;
+	margin: 0 0 0 20px;
+
+}
+footer .footer-contnr .foot-bx ul li a{
+	text-decoration: none;
+	color: white;
+
+}
+
+footer .c-right{
+	text-align: center;
+	background-color: darkslategray;
+	color: white;
+	padding: 0 0 10px 0;
+	margin: 0;
+	width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*    ************************** nw ***********************      */
+
+
+/*    ************************** ANOTHER VIEW ***********************      */
+
+@media(max-width: 750px){
+	header{
+		padding: 0 3%;
+
+	}
+	.menu-btn{
+		display: block;
+	}
+	header nav{
+		position: absolute;
+		width: 100%;
+		height: calc(100vh - 40px);
+		background: DarkSlateBlue;
+		top: 40px;
+		left: -100%;
+		transition: 0.3s;
+	}
+	header nav ul{
+		display: block;
+		text-align: center;
+
+	}
+	header nav ul li a:not(ul li ul li){
+		border-bottom:  1px solid MediumSlateBlue;	
+	}
+	header nav.active{
+		left: 0;
+	}
+	header nav ul li.active ul{
+		position: relative;;
+		background: SlateBlue;
+	}
+	header nav ul li ul li{
+		width: 100%;
+	}
+ 	p{
+ 	margin: 0;
+ 	}
