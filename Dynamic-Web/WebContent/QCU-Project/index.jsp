@@ -59,7 +59,7 @@ byte[ ] imgData = null ;
 				<li class="n-list"><a>News & Events</a>
 					<ul>
 						<li><a href="news.jsp">News</a></li>
-						<li><a href="event.jsp">Events</a></li>
+						<li><a href="event-i.jsp">Events</a></li>
 						<li><a href="#">Announcememt</a></li>
 						<li><a href="#">University Calendar</a></li>
 					</ul>
@@ -109,12 +109,12 @@ byte[ ] imgData = null ;
 				<!--     >>>>>>>>>>>>>>  NEWS <<<<<<<<<<<<<<<         -->
 
 
-	<div class="contnr nw-contnr">
-		<div class="ne-contnr-btn contnr-btn">
+	<div class="contnr mediumslateblue">
+		<div class="ne-contnr-btn contnr-btn aliceblue">
 			<h1 class="category"><a href="">NEWS</a></h1>
 		</div>
 		<div class="nw-sect">
-			<a class="nw-anchor" href="">
+			<a class="nw-anchor anchor" href="">
 				<div class="nw-img-sect">
 					<img  class="nw-img" src="img/LZ.jpg">
 				</div>
@@ -124,7 +124,7 @@ byte[ ] imgData = null ;
 					</p>
 				</div>
 			</a>
-			<a class="nw-anchor" href="">
+			<a class="nw-anchor anchor" href="">
 				<div class="nw-img-sect">
 						<img  class="nw-img"  src="img/LP.jpg">
 				</div>
@@ -134,7 +134,7 @@ byte[ ] imgData = null ;
 					</p>
 				</div>
 			</a>
-			<a class="nw-anchor" href="">
+			<a class="nw-anchor anchor" href="">
 				<div class="nw-img-sect">		
 					<img  class="nw-img"  src="img/AS.jpg">
 				</div>
@@ -144,7 +144,7 @@ byte[ ] imgData = null ;
 					</p>
 				</div>
 			</a>
-			<a class="nw-anchor" href="">
+			<a class="nw-anchor anchor" href="">
 				<div class="nw-img-sect">		
 					<img  class="nw-img"  src="img/Pinknumb.jpg">
 				</div>
@@ -161,13 +161,13 @@ byte[ ] imgData = null ;
 
 
 								<!--     >>>>>>>>>>>>>> 	EVENTS  <<<<<<<<<<<<<<<         -->
-	<div class="contnr event-contnr">
-		<div class="ev-contnr-btn contnr-btn">
-			<h1 class="category"><a href="">EVENTS</a></h1>
+	<div class="contnr contnr1">
+		<div class="ev-contnr-btn contnr-btn mediumslateblue">
+			<h1 class="category"><a href="event-i.jsp">EVENTS</a></h1>
 		</div>
 		<div class="event-sect">
-					<a class="event-anchor" href="">
-				<div class="ev-date">
+					<a class="event-anchor anchor" href="">
+				<div class="ev-date mediumslateblue c-aliceblue">
 					<p>Dec</p>
 					<p>9</p>
 				</div>
@@ -192,8 +192,8 @@ byte[ ] imgData = null ;
 			while(resultSet.next()){
 		%>
 
-			<a class="event-anchor" href="event.jsp?g_id=<%= resultSet.getString("id")%>">
-				<div class="ev-date">
+			<a class="event-anchor anchor" href="event.jsp?g_id=<%= resultSet.getString("id")%>">
+				<div class="ev-date mediumslateblue c-aliceblue">
 					<p><%= resultSet.getString("month") %></p>
 					<p><%= resultSet.getString("day") %></p>
 				</div>

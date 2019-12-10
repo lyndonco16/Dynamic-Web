@@ -1,5 +1,4 @@
 <%@ include file = "jsp/conn.jsp" %>
-<%@ page errorPage = "jsp/error.jsp" %>
 <%@ page import = "java.sql.*" %>
 <%@ page import="java.io.*"%>
 
@@ -9,8 +8,10 @@
 	Connection conn = null;
 	Statement st = null;
 	ResultSet resultSet = null;
-	String g_id = request.getParameter("g_id");
-	int passed_id = Integer.parseInt(g_id);
+	String g_id  = request.getParameter("g_id");
+	int	passed_id = Integer.parseInt(g_id);
+		
+
 %>
 
 <!DOCTYPE html>
@@ -94,122 +95,106 @@
 				<article class="ev-s-bar">
 				<div class="ev-poster-desc">
 					<img class="ev-poster" src="img/sample6.JPG">
-
-
 					<ul>
-		<% 
-		try{
+	<% 
+						try{
 
-			conn = DriverManager.getConnection(connURL, "root", "");
-			st = conn.createStatement();
-			
-			String sql = "SELECT id, DAYNAME(date_start) as day_s, DATE_FORMAT(date_start, '%b %e, %Y') as date_s, TIME_FORMAT( time_start, '%h:%i %p' ) as time_s, DAYNAME(date_end) as day_e, DATE_FORMAT(date_end, '%b %e, %Y') as date_e, TIME_FORMAT( time_end, '%h:%i %p') as time_e, event_creator, title, location  FROM event_tbl WHERE id = '"+ passed_id +"' ";
-					resultSet = st.executeQuery(sql);
-			
-			while(resultSet.next()){
-		%>
-						<li>
-							<h5>Title:</h5>
-							<p><%= resultSet.getString("title") %></p>
-						</li>
-						<li>
-							<h5>Duration:</h5>
-							
-								<%= resultSet.getString("day_s") %>, 
-								<%= resultSet.getString("date_s") %>, 
-								<%= resultSet.getString("time_s") %> - 
-								<% if(resultSet.getString("day_e")==null){
-									out.println("");
-								}else{
-									out.println(resultSet.getString("day_e")+", ");
-								} %>
-								<% if(resultSet.getString("date_e")==null){
-									out.println("");
-								}else{
-									out.println(resultSet.getString("date_e")+", ");
-								} %> 
-								<% if(resultSet.getString("time_e")==null){
-									out.println("");
-								}else{
-									out.println(resultSet.getString("time_e"));
-								} %>
-						</li>
-						<li>
-							<h5>Ticket:</h5>
-							<p>Free</p>
-						</li>
-						<li>
-							<h5>Location:</h5>
-							<p><%= resultSet.getString("location") %> </p>
-						</li>
-						<li>
-							<h5>Made By:</h5>
-							<p><%= resultSet.getString("event_creator") %> </p>
-							<p style="opacity: .5"> <i>Securitiyay Matilda President</i> </p>
-						</li>
-		<%
-			}
-		}catch (Exception ex){
-			out.println(ex);
-			
-		}
-		%>	
+							conn = DriverManager.getConnection(connURL, "root", "");
+							st = conn.createStatement();
+							String sql = "SELECT id, DAYNAME(date_start) as day_s, DATE_FORMAT(date_start, '%b %e, %Y') as date_s, TIME_FORMAT( time_start, '%h:%i %p' ) as time_s, DAYNAME(date_end) as day_e, DATE_FORMAT(date_end, '%b %e, %Y') as date_e, TIME_FORMAT( time_end, '%h:%i %p') as time_e, event_creator, title, location  FROM event_tbl WHERE id = '"+ passed_id +"' ";
+							resultSet = st.executeQuery(sql);							
+							while(resultSet.next()){
+	%>
+								<li>
+									<h5>Title:</h5>
+									<p><%= resultSet.getString("title") %></p>
+								</li>
+								<li>
+									<h5>Duration:</h5>
+										<%= resultSet.getString("day_s") %>, 
+										<%= resultSet.getString("date_s") %>, 
+										<%= resultSet.getString("time_s") %> - 
+										<% if(resultSet.getString("day_e")==null){
+											out.println("");
+										}else{
+											out.println(resultSet.getString("day_e")+", ");
+										} %>
+										<% if(resultSet.getString("date_e")==null){
+											out.println("");
+										}else{
+											out.println(resultSet.getString("date_e")+", ");
+										} %> 
+										<% if(resultSet.getString("time_e")==null){
+											out.println("");
+										}else{
+											out.println(resultSet.getString("time_e"));
+										} %>
+								</li>
+								<li>
+									<h5>Ticket:</h5>
+									<p>Free</p>
+								</li>
+								<li>
+									<h5>Location:</h5>
+									<p><%= resultSet.getString("location") %> </p>
+								</li>
+								<li>
+									<h5>Made By:</h5>
+									<p><%= resultSet.getString("event_creator") %> </p>
+									<p style="opacity: .5"> <i>Securitiyay Matilda President</i> </p>
+								</li>
+	<%
+							}
+						}catch (Exception ex){
+							out.println(ex);
+						}
+					
+	%>	
 					</ul>	
-
-
-
-
 				</div>
 				<div class="ev-list">
 					<h1>Event List</h1>
-
-
 					<ul>
-		<% 
+	<% 
 		try{
-
 			conn = DriverManager.getConnection(connURL, "root", "");
-			st = conn.createStatement();
-			
+			st = conn.createStatement();			
 			String sql = "SELECT id, DAYNAME(date_start) as day_s, DATE_FORMAT(date_start, '%b %e, %Y') as date_s, TIME_FORMAT( time_start, '%h:%i %p' ) as time_s, DAYNAME(date_end) as day_e, DATE_FORMAT(date_end, '%b %e, %Y') as date_e, TIME_FORMAT( time_end, '%h:%i %p') as time_e, description, title FROM event_tbl WHERE date_start > CURRENT_DATE ";
-					resultSet = st.executeQuery(sql);
-			
+			resultSet = st.executeQuery(sql);			
 			while(resultSet.next()){
-		%>
-						<li>
-							<h3><%= resultSet.getString("title") %></h3>
-							<p style="white-space:nowrap,overflow: hidden,text-overflow: ellipsis,max-width: 200px"><%= resultSet.getString("description") %></p>
-
-
-							<p>
-								<%= resultSet.getString("day_s") %>, <%= resultSet.getString("date_s") %>, <%= resultSet.getString("time_s") %> - 
-								<% if(resultSet.getString("day_e")==null){
-									out.println("");
-								}else{
-									out.println(resultSet.getString("day_e")+", ");
-								} %>
-								<% if(resultSet.getString("date_e")==null){
-									out.println("");
-								}else{
-									out.println(resultSet.getString("date_e")+", ");
-								} %> 
-								<% if(resultSet.getString("time_e")==null){
-									out.println("");
-								}else{
-									out.println(resultSet.getString("time_e"));
-								} %>
-
-							</p>
-							<a style="text-decoration: none,color:black" href="event.jsp?g_id=<%= resultSet.getString("id") %>" >...Read more</a>
-
-						</li>
-		<%
+	%>
+				<li>
+					<h3><%= resultSet.getString("title") %></h3>
+					<p style="white-space:nowrap,overflow: hidden,text-overflow: ellipsis,max-width: 200px"><%= resultSet.getString("description") %>
+					</p>
+					<p>
+						<%= resultSet.getString("day_s") %>, <%= resultSet.getString("date_s") %>, <%= resultSet.getString("time_s") %> - 
+						<% if(resultSet.getString("day_e")==null){
+							out.println("");
+						}else{
+							out.println(resultSet.getString("day_e")+", ");
+						} %>
+						<% if(resultSet.getString("date_e")==null){
+							out.println("");
+						}else{
+							out.println(resultSet.getString("date_e")+", ");
+						} %> 
+						<% if(resultSet.getString("time_e")==null){
+							out.println("");
+						}else{
+							out.println(resultSet.getString("time_e"));
+						} %>
+					</p>
+					<a style="text-decoration: none,color:black" href="event.jsp?g_id=<%= resultSet.getString("id") %>" >...Read more</a>
+				</li>
+	<%
 			}
 		}catch (Exception ex){
 			out.println(ex);
 			
 		}
-		%>			</ul>
+	%>
+			</ul>
 
 				</div>
 				<div class="btn-align">
@@ -217,54 +202,53 @@
 				</div>
 
 			</article>
-					<% 
-		try{
 
-			conn = DriverManager.getConnection(connURL, "root", "");
-			st = conn.createStatement();
-			
-			String sql = "SELECT DAYNAME(date_start) as day_s, DATE_FORMAT(date_start, '%b %e, %Y') as date_s, TIME_FORMAT( time_start, '%h:%i %p' ) as time_s, DAYNAME(date_end) as day_e, DATE_FORMAT(date_end, '%b %e, %Y') as date_e, TIME_FORMAT( time_end, '%h:%i %p') as time_e, event_creator, title, description FROM event_tbl WHERE id = '"+ passed_id +"' ";
+
+			<%--  Display Article  --%>
+	<% 
+
+				try{
+					conn = DriverManager.getConnection(connURL, "root", "");
+					st = conn.createStatement();
+					String sql = "SELECT DAYNAME(date_start) as day_s, DATE_FORMAT(date_start, '%b %e, %Y') as date_s, TIME_FORMAT( time_start, '%h:%i %p' ) as time_s, DAYNAME(date_end) as day_e, DATE_FORMAT(date_end, '%b %e, %Y') as date_e, TIME_FORMAT( time_end, '%h:%i %p') as time_e, event_creator, title, description FROM event_tbl WHERE id = '"+ passed_id +"' ";
 					resultSet = st.executeQuery(sql);
-			
-			while(resultSet.next()){
-		%>
-			<main>
-				<div class="ev-head">
-					<p class="ev-author"><b><%= resultSet.getString("event_creator") %></b></p>
-					<h1><%= resultSet.getString("title") %></h1>
-						<p class="ev-page-date"><%= resultSet.getString("day_s") %>, 
-								<%= resultSet.getString("date_s") %>, 
-								<%= resultSet.getString("time_s") %> - 
-								<% if(resultSet.getString("day_e")==null){
-									out.println("");
-								}else{
-									out.println(resultSet.getString("day_e")+", ");
-								} %>
-								<% if(resultSet.getString("date_e")==null){
-									out.println("");
-								}else{
-									out.println(resultSet.getString("date_e")+", ");
-								} %> 
-								<% if(resultSet.getString("time_e")==null){
-									out.println("");
-								}else{
-									out.println(resultSet.getString("time_e"));
-								} %></p>
-				</div>
-				<article>
-							<p><%= resultSet.getString("description") %></p>
+					while(resultSet.next()){
+	%>
+						<main>
+							<div class="ev-head">
+								<p class="ev-author"><b><%= resultSet.getString("event_creator") %></b></p>
+								<h1><%= resultSet.getString("title") %></h1>
+								<p class="ev-page-date"><%= resultSet.getString("day_s") %>, 
+									<%= resultSet.getString("date_s") %>, 
+									<%= resultSet.getString("time_s") %> - 
+									<% if(resultSet.getString("day_e")==null){
+										out.println("");
+									}else{
+										out.println(resultSet.getString("day_e")+", ");
+									} %>
+									<% if(resultSet.getString("date_e")==null){
+										out.println("");
+									}else{
+										out.println(resultSet.getString("date_e")+", ");
+									} %> 
+									<% if(resultSet.getString("time_e")==null){
+										out.println("");
+									}else{
+										out.println(resultSet.getString("time_e"));
+									} %>
+								</p>
+							</div>
+							<article>
+								<p><%= resultSet.getString("description") %></p>				
+							</article>
+						</main>
+	<%
+					}
+				}catch (Exception ex){
+					out.println(ex);
+				}
 
-					
-				</article>
-			</main>
-		<%
-			}
-		}catch (Exception ex){
-			out.println(ex);
-			
-		}
-		%>	
-
+	%>
 		</div>
 	</section>
 

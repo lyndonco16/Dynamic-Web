@@ -7,6 +7,21 @@
 
 }
 
+.mediumslateblue{
+	background-color: mediumslateblue;
+}
+
+.aliceblue{
+	background-color: aliceblue;
+}
+
+.c-mediumslateblue{
+	color: mediumslateblue;
+}
+.c-aliceblue{
+	color: aliceblue;
+}
+
 .shad-light{
 	box-shadow: -5px -5px 6px 3px dimgray;
 	z-index: 1;
@@ -51,40 +66,58 @@ section{
 }
 
 
-.contnr-btn{
+div.contnr-btn{
 	box-shadow: 0px 5px 10px -10px black;
 	transform: skewX(25deg);
 	padding: 0 40px 0 40px;
 	margin: 10px 10px 20px 10px;
 	float: right;
-	transition: .4s
+	transition: .2s
 }
 
 
-.contnr-btn:hover{
+div.contnr-btn:hover{
 	box-shadow: 0px 5px 10px -10px black;
 	transform: skewX(25deg);
-	padding: 0 40px 0 90px;
+	padding: 0 40px 0 150px;
 	margin: 10px 10px 20px 10px;
 	float: right;
-	transition: .4s
+	transition: .2s
 
 }
 
-.nw-contnr .ne-contnr-btn h1 a{
-	text-decoration: none;
-	color: mediumslateblue;
-	font-family: Cambria, Times New Roman, Serif;
-}
-.event-contnr .ev-contnr-btn h1 a{
+.contnr .mediumslateblue h1 a{
 	text-decoration: none;
 	color: aliceblue;
 	font-family: Cambria, Times New Roman, Serif;
 }
+
+.contnr .aliceblue h1 a{
+	text-decoration: none;
+	color: mediumslateblue;
+	font-family: Cambria, Times New Roman, Serif;
+}
+
+
+
+
+
 .category{
 	transform: skewX(-25deg);
 	text-align: left;	
 }
+
+
+
+.anchor{
+	height: 100%;
+	padding: 0;
+	text-decoration: none;
+	color: black;
+	box-shadow: 0px 5px 15px -15px black;
+
+}
+
 .read-more{
 color: darkslateblue;
 font-size: 18px;
@@ -126,6 +159,12 @@ article .btn-align button{
 }
 
 article .btn-align button h2{
+}
+
+
+#event-i{
+	margin: 50px 0 0 0;
+	padding: 0 0 0 0;
 }
 
 
@@ -393,14 +432,16 @@ header nav ul li ul li{
 	background-color: aliceblue;
 	border-right: 10px solid gray;
 }
+
+
+a.event-anchor{
+	margin: 0 10px;
+	width: 30%;
+}
+
 a.nw-anchor{
-	height: 100%;
-	padding: 0;
 	margin: 0 20px;
 	width: 22%;
-	text-decoration: none;
-	color: black;
-	box-shadow: 0px 5px 10px -10px black;
 }
 .nw-img-sect{
 	width: 100%;
@@ -438,9 +479,7 @@ a.nw-anchor{
 
 /*		********************** END OF nw contnr *************************/
 
-.event-contnr{
-	background-color: aliceblue;
-}
+
 .event-sect{
 	clear: both;
 	display: flex;
@@ -449,40 +488,42 @@ a.nw-anchor{
 	margin: 0;
 }
 .ev-contnr-btn{
-	background-color: mediumslateblue;
 	color: white;
 	border-right: 10px solid darkslateblue;
 	float: right;
 }
+
+
 a.event-anchor{
-	height: 100%;
-	padding: 0;
 	margin: 0 10px;
-	text-decoration: none;
 	width: 30%;
-	color: black;
-	box-shadow: 0px 5px 15px -15px black;
 }
 .ev-date{
 	position: absolute;
-	background-color: mediumslateblue;
 	margin: -10px 0 0 15px;
 	padding: 5px 10px;
 	box-shadow: 0px 5px 10px -10px black;
 }
+
+
+
 .ev-date p,
 .ev-date h3{
-	color: white;
+
 	margin: 3px 3px 2px 3px ;
 	padding:0;
 	text-align: center;
 }
+
+
+
 .event-img-sect{
 	width: 100%;
 	padding: 0;
 	margin: 0;
 }
 .event-img{
+	background-color: black;
 	width: 100%;
 	height: 150px;
 	object-fit: cover;
@@ -514,6 +555,7 @@ a.event-anchor{
 	padding: 0 10px 5px 30px;
 	overflow-wrap: break-word;
 }
+
 
 
 
